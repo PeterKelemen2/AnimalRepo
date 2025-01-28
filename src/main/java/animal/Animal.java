@@ -3,14 +3,26 @@ package animal;
 public class Animal {
     private String name;
     private AnimalSize size;
+    private AnimalSound sound;
 
     public Animal(String name, AnimalSize size) {
         this.name = name;
         this.size = size;
 
-        if (size == AnimalSize.MEDIUM) {
-            System.out.println("Animal is medium size");
+        switch (size) {
+            case SMALL:
+                this.sound = AnimalSound.CHIRP;
+                break;
+            case MEDIUM:
+                this.sound = AnimalSound.BARK;
+                break;
+            case LARGE:
+                this.sound = AnimalSound.ROAR;
+                break;
         }
+
+        System.out.println(this.sound);
+
 
         if (name.equals("newName")) {
             System.out.println(name);
@@ -36,5 +48,13 @@ public class Animal {
 
     public void setSize(AnimalSize size) {
         this.size = size;
+    }
+
+    public AnimalSound getSound() {
+        return sound;
+    }
+
+    public void setSound(AnimalSound sound) {
+        this.sound = sound;
     }
 }
