@@ -16,4 +16,25 @@ public class Animal {
             System.out.println(name);
         }
     }
+
+    @Override
+    public String toString() {
+        return this.getClass().getName() + " -  Name: " + name + ", Size: " + size;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public AnimalSize getSize() {
+        return size;
+    }
+
+    public void setSize(AnimalSize size) {
+        this.size = size;
+    }
 }
