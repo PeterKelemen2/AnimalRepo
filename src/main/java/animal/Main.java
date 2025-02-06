@@ -12,5 +12,8 @@ public class Main {
         System.out.println(dog);
         dog.fetch();
 
+        Cat cat = new Cat("Cica", AnimalSize.SMALL);
+        System.out.println(cat);
+        cat.purr();
     }
 }
