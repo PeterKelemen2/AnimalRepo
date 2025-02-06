@@ -20,13 +20,6 @@ public class Animal {
                 this.sound = AnimalSound.ROAR;
                 break;
         }
-
-        System.out.println(this.sound);
-
-
-        if (name.equals("newName")) {
-            System.out.println(name);
-        }
     }
 
     @Override
@@ -39,7 +32,12 @@ public class Animal {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (!name.equals(this.name)) {
+            this.name = name;
+            System.out.println("Name set!");
+        } else {
+            System.out.println("Name not set!");
+        }
     }
 
     public AnimalSize getSize() {
@@ -47,7 +45,9 @@ public class Animal {
     }
 
     public void setSize(AnimalSize size) {
-        this.size = size;
+        if (this.size != size) {
+            this.size = size;
+        }
     }
 
     public AnimalSound getSound() {
@@ -55,6 +55,8 @@ public class Animal {
     }
 
     public void setSound(AnimalSound sound) {
-        this.sound = sound;
+        if (this.sound != sound) {
+            this.sound = sound;
+        }
     }
 }
