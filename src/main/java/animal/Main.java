@@ -7,5 +7,10 @@ public class Main {
         animal.setName("Lion");
 
         System.out.println(animal);
+
+        Dog dog = new Dog("Buksi", AnimalSize.MEDIUM);
+        System.out.println(dog);
+        dog.fetch();
+
     }
 }
