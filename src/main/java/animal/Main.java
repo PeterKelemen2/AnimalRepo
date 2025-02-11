@@ -43,7 +43,7 @@ public class Main {
         System.out.println(num);
         System.out.println((double) num);
 
-        jsonWriteAnimalListToFile(animalList, "resources/data.json");
+        jsonWriteAnimalListToFile(animalList, "data/data.json");
     }
 
     private static void jsonWriteAnimalListToFile(ArrayList<Animal> list, String outputPath) {
